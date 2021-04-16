@@ -1,0 +1,35 @@
+{
+    "name": "filippotoso/rasa-client",
+    "version": "1.0.0",
+    "description": "A client for Rasa Open Server",
+    "keywords": [
+        "php",
+        "rasa",
+        "sdk",
+        "rest",
+        "api"
+    ],
+    "license": "MIT",
+    "authors": [{
+        "name": "Filippo Toso",
+        "email": "filippo.toso@creativepark.it"
+    }],
+    "require": {
+        "php": ">=7.2|^8.0",
+        "illuminate/support": ">=7.0",
+        "guzzlehttp/guzzle": "^6.2|^7.0"
+    },
+    "autoload": {
+        "psr-4": { "FilippoToso\\Rasa\\" : "src/" }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "FilippoToso\\Rasa\\Laravel\\ServiceProvider"
+            ],
+            "aliases": {
+                "PositionStack": "FilippoToso\\Rasa\\Laravel\\Facade"
+            }
+        }
+    }
+}
